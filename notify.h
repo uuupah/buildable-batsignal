@@ -12,6 +12,6 @@
 void notification_init(char* appname, char *icon, int expires);
 void set_message_command(char *command);
 void notify(char *msg, NotifyUrgency urgency, BatteryState battery);
-void close_notification();
+void close_notification(void);
 
 #endif

@@ -5,7 +5,6 @@
 #define _DEFAULT_SOURCE
 #include "options.h"
 #include <err.h>
-#include <errno.h>
 #include <libnotify/notify.h>
 #include <stdlib.h>
 #include <stdio.h>

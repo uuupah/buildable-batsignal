@@ -5,7 +5,6 @@
 #define _DEFAULT_SOURCE
 #include <dirent.h>
 #include <err.h>
-#include <errno.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>

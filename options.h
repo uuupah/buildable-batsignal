@@ -55,7 +55,7 @@ typedef struct Config {
   int notification_expires;
 } Config;
 
-char* find_config_file();
+char* find_config_file(void);
 char** read_config_file(char *path, int *argc, char *argv0);
 void parse_args(int argc, char *argv[], Config *config);
 void validate_options(Config *config);

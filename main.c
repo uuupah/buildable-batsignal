@@ -17,7 +17,6 @@
 
 #define _DEFAULT_SOURCE
 #include <err.h>
-#include <errno.h>
 #include <signal.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -28,12 +27,12 @@
 #include "notify.h"
 #include "options.h"
 
-void print_version()
+void print_version(void)
 {
   printf("%s %s\n", PROGNAME, VERSION);
 }
 
-void print_help()
+void print_help(void)
 {
   printf("Usage: %s [OPTIONS]\n\
 \n\
@@ -75,15 +74,16 @@ Options:\n\
 ", PROGNAME, PROGNAME);
 }
 
-void cleanup()
+void cleanup(void)
 {
   if (notify_is_initted()) {
     notify_uninit();
   }
 }
 
-void signal_handler()
+void signal_handler(int signum)
 {
+  (void)signum; // unused parameter
   exit(EXIT_SUCCESS);
 }
 
